@@ -23,7 +23,7 @@ function init() {
         const pointsArray = modelR.children[0].geometry.attributes.position.array;
          
         for (let i = 0; i < pointsArray.length; i++) {
-            pointsArray[i]  = pointsArray[i]/10;	
+            pointsArray[i]  = pointsArray[i]/3;	
 		}
         
         geometry.setAttribute('position', new THREE.BufferAttribute(pointsArray, 3));
@@ -79,12 +79,19 @@ function animate() {
     requestAnimationFrame( animate );
 	
     MP.rotation.x += 0.001;
-	MP.rotation.y -= 0.01
+	MP.rotation.y -= 0.01;
+	MP.rotation.z -= 0.001;
+
+	MP2.rotation.x -= 0.001;
+	MP2.rotation.y += 0.01;
+	MP2.rotation.z += 0.001;
 
     render();
 }
 const material = new THREE.PointsMaterial( { size: 0.02, color: 0x0000ff } );
 const geometry = init();
 const MP = new THREE.Points( geometry, material );
+const MP2 = new THREE.Points( geometry, material );
 scene.add(MP);
+scene.add(MP2);
 animate();
