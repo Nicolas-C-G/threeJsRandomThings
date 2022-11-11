@@ -27,10 +27,6 @@ function init() {
 		}
         
         geometry.setAttribute('position', new THREE.BufferAttribute(pointsArray, 3));
-        const material = new THREE.PointsMaterial( { size: 0.02, color: 0x0000ff } );
-        
-        const MP = new THREE.Points( geometry, material );
-        scene.add( MP);
 
 		render();
 
@@ -80,10 +76,15 @@ function render() {
 }
 
 function animate() {
-    //requestAnimationFrame( animate );
-    console.log("hello");
+    requestAnimationFrame( animate );
+	
+    MP.rotation.x += 0.001;
+	MP.rotation.y -= 0.01
+
     render();
 }
-
-console.log(init());
+const material = new THREE.PointsMaterial( { size: 0.02, color: 0x0000ff } );
+const geometry = init();
+const MP = new THREE.Points( geometry, material );
+scene.add(MP);
 animate();
