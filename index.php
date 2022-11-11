@@ -15,4 +15,4 @@
 </script>
 
 <!-- simple cube hello world -->
-<script type="module" src="js/plane.js"></script> 
+<script type="module" src="js/importGlbModel.js"></script> 
