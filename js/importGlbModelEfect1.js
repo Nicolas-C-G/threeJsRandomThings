@@ -80,8 +80,8 @@ function onWindowResize() {
 	renderer.setSize( window.innerWidth, window.innerHeight );
 	composer.setSize( window.innerWidth, window.innerHeight );
 
-	effectFocus.uniforms[ 'screenWidth' ].value = window.innerWidth * window.devicePixelRatio;
-	effectFocus.uniforms[ 'screenHeight' ].value = window.innerHeight * window.devicePixelRatio;
+	//effectFocus.uniforms[ 'screenWidth' ].value = window.innerWidth * window.devicePixelRatio;
+	//effectFocus.uniforms[ 'screenHeight' ].value = window.innerHeight * window.devicePixelRatio;
 
 }
 
