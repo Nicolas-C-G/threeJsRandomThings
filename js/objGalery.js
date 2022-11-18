@@ -15,6 +15,7 @@ function init(){
     camera.position.set( 0, 0, 10 );
 
     scene = new THREE.Scene();
+    scene.fog = new THREE.FogExp2( 0xefd1b5, 0.005 );
 
     renderer = new THREE.WebGLRenderer( { antialias: true } );
     renderer.setPixelRatio( window.devicePixelRatio );
