@@ -15,4 +15,4 @@
 </script>
 
 <!-- simple cube hello world -->
-<script type="module" src="js/objGalery.js"></script> 
+<script type="module" src="js/minimap.js"></script> 
