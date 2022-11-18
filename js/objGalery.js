@@ -24,13 +24,6 @@ function init(){
     renderer.outputEncoding = THREE.sRGBEncoding;
     container.appendChild( renderer.domElement );
 
-    // const controls = new OrbitControls( camera, renderer.domElement );
-    // controls.addEventListener( 'change', render ); // use if there is no animation loop
-    // controls.minDistance = 2;
-    // controls.maxDistance = 10;
-    // controls.target.set( 0, 0, - 0.2 );
-    // controls.update();
-
     controls = new FirstPersonControls( camera, renderer.domElement );
 	controls.movementSpeed = 1;
 	controls.lookSpeed = 0.01;
@@ -80,8 +73,6 @@ function onWindowResize() {
     light.position.set( 10, 10, 10 );
     scene.add( light );
 }
-
-			//
 
 function render() {
 
